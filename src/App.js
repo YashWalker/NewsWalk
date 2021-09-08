@@ -8,34 +8,34 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 export default class App extends Component {
   render() {
     return (
-      <>
+      <div>
         <Router>
           <Navbar />
           <Switch>
-            <Route exact path="/home">
-              <News country="in" category="general" pageSize={9} />
+            <Route exact path="/">
+              <News key="general" category="general" pageSize={9} />
             </Route>
             <Route exact path="/business">
-              <News country="in" category="business" pageSize={9} />
+              <News key="business" category="business" pageSize={9} />
             </Route>
             <Route exact path="/entertainment">
-              <News country="in" category="entertainment" pageSize={9} />
+              <News key="entertainment" category="entertainment" pageSize={9} />
             </Route>
             <Route exact path="/health">
-              <News country="in" category="health" pageSize={9} />
+              <News key="health" category="health" pageSize={9} />
             </Route>
             <Route exact path="/science">
-              <News country="in" category="science" pageSize={9} />
+              <News key="science" category="science" pageSize={9} />
             </Route>
             <Route exact path="/sports">
-              <News country="in" category="sports" pageSize={9} />
+              <News key="sports" category="sports" pageSize={9} />
             </Route>
             <Route exact path="/technology">
-              <News country="in" category="technology" pageSize={9} />
+              <News key="technology" category="technology" pageSize={9} />
             </Route>
           </Switch>
         </Router>
-      </>
+      </div>
     );
   }
 }

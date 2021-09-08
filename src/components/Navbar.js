@@ -32,41 +32,79 @@ export default class Navbar extends Component {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/">
+                  <Link className="nav-link" to="/business">
                     Business
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/">
+                  <Link className="nav-link" to="/entertainment">
                     Entertainment
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/">
-                    General
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/">
+                  <Link className="nav-link" to="/health">
                     Health
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/">
+                  <Link className="nav-link" to="/science">
                     Science
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/">
+                  <Link className="nav-link" to="/sports">
                     Sports
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/">
+                  <Link className="nav-link" to="/technology">
                     Technology
                   </Link>
                 </li>
               </ul>
+              <div className="dropdown mx-3">
+                <a
+                  className="btn btn-secondary dropdown-toggle"
+                  href="/"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Country
+                </a>
+
+                <ul
+                  className="dropdown-menu"
+                  aria-labelledby="dropdownMenuLink"
+                >
+                  <li>
+                    <Link className="dropdown-item" to="/">
+                      In
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/">
+                      Un
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/">
+                      Uk
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/">
+                      Jp
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/">
+                      Ru
+                    </Link>
+                  </li>
+                </ul>
+              </div>
               <form className="d-flex">
                 <input
                   className="form-control me-2"
