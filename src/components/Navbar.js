@@ -1,14 +1,30 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import logo from "./imgs/logo121.png";
+import DarkLight from "./DarkLight";
 
 export default class Navbar extends Component {
   render() {
     return (
       <>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav
+          className="navbar navbar-expand-lg navbar-light"
+          style={{ backgroundColor: "#70bef5" }}
+        >
           <div className="container-fluid">
             <Link className="navbar-brand" to="/">
-              NewsWalk
+              <span
+                style={{ fontFamily: "Kaushan Script", fontSize: "23.5px" }}
+              >
+                <img
+                  src={logo}
+                  alt="logo"
+                  /*width="30"
+                height="24"*/
+                  className="d-inline-block align-text-top mx-2"
+                />
+                NewsWalk
+              </span>
             </Link>
             <button
               className="navbar-toggler"
@@ -62,60 +78,20 @@ export default class Navbar extends Component {
                   </Link>
                 </li>
               </ul>
-              <div className="dropdown mx-3">
-                <a
-                  className="btn btn-secondary dropdown-toggle"
-                  href="/"
-                  role="button"
-                  id="dropdownMenuLink"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Country
-                </a>
 
-                <ul
-                  className="dropdown-menu"
-                  aria-labelledby="dropdownMenuLink"
-                >
-                  <li>
-                    <Link className="dropdown-item" to="/">
-                      In
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/">
-                      Un
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/">
-                      Uk
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/">
-                      Jp
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/">
-                      Ru
-                    </Link>
-                  </li>
-                </ul>
-              </div>
               <form className="d-flex">
                 <input
                   className="form-control me-2"
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
+                  style={{
+                    borderRadius: "8px",
+                    width: "200px",
+                  }}
                 />
-                <button className="btn btn-outline-success" type="submit">
-                  Search
-                </button>
               </form>
+              <DarkLight />
             </div>
           </div>
         </nav>
