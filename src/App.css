@@ -42,3 +42,12 @@ body {
   background-color: #e3f2fd;
   font-family: "Merriweather", serif;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #68c0ff;
+  border-radius: 6px;
+}
