@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import dark from "./imgs/moon (1).svg";
-import light from "./imgs/sun (1).svg";
 
 function DarkLight() {
   const [mode, setMode] = useState("light");
