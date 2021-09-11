@@ -8,12 +8,17 @@ export default class NewsItem extends Component {
     return (
       <>
         <div className="card my-2 " style={{ borderRadius: "10px" }}>
-          <span
-            className="position-absolute top-0  translate-middle badge rounded-pill bg-danger"
-            style={{ zIndex: 1, left: "85%" }}
+          <div
+            style={{
+              display: "flex",
+              position: "absolute",
+              justifyContent: "flex-end",
+              right: "0",
+            }}
           >
-            {source.slice(0, 15)}
-          </span>
+            <span className="badge rounded-pill bg-danger">{source}</span>
+          </div>
+
           <img
             src={!imageUrl ? img : imageUrl}
             className="card-img-top"
@@ -22,7 +27,7 @@ export default class NewsItem extends Component {
           />
           <div className="card-body">
             <h5 className="card-title">{title}</h5>
-            <p className="card-text">{description.slice(0, 80)}...</p>
+            <p className="card-text">{description.slice(0, 100)}...</p>
             <p className="card-text">
               <small className="text-muted">
                 By {author} on {new Date(date).toUTCString()}
